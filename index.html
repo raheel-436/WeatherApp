@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="app-container">
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Enter city name"
+            class="search-input"
+          />
+          <button class="search-btn">
+            <img
+              src="./assets/search.png"
+              alt="search-icon"
+              class="search-icon"
+            />
+          </button>
+        </div>
+        <div class="weather">
+          <img
+            class="weather-img"
+            src="./assets/clear.png"
+            alt="weather image"
+            draggable="false"
+          />
+          <h1 class="temp">22°c</h1>
+          <h2 class="city">Berlin</h2>
+
+          <div class="details">
+            <div class="col">
+              <img
+                src="./assets/humidity.png"
+                draggable="false"
+                class="col-icon"
+              />
+              <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div class="col">
+              <img src="./assets/wind.png" draggable="false" class="col-icon" />
+              <div>
+                <p class="wind">15 km/h</p>
+                <p>Wind</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
     <script src="./scripts/script.js"></script>
   </body>
 </html>
