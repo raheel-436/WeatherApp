@@ -10,10 +10,16 @@ const defaultCity = "Peshawar";
 fetchWeather(defaultCity);
 
 async function fetchWeather(city) {
-  const respone = await fetch(apiUrl + city + `&appid=${apiKEY}`);
-  let data = await respone.json();
-  console.log(data);
-  displayWeather(data);
+  const resposne = await fetch(apiUrl + city + `&appid=${apiKEY}`);
+
+  if (resposne.status == 404) {
+    document.querySelector(".error").style.display = "flex";
+    document.querySelector(".weather").style.display = "none";
+  } else {
+    let data = await resposne.json();
+    console.log(data);
+    displayWeather(data);
+  }
 }
 
 function displayWeather(data) {
@@ -48,6 +54,8 @@ function displayWeather(data) {
   } else if (weather[0].main == "Mist") {
     weatherIcon.src = "./assets/mist.png";
   }
+  document.querySelector(".error").style.display = "none";
+  document.querySelector(".weather").style.display = "flex";
 }
 
 searchBtn.addEventListener("click", () => {

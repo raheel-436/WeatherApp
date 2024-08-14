@@ -17,7 +17,7 @@
 
 .app-container {
   width: 350px;
-  min-height: 400px;
+  min-height: 200px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -70,6 +70,15 @@
 
 .search-icon {
   width: 1.125rem;
+}
+/* Error */
+
+.error {
+  display: flex;
+  justify-content: center;
+  color: #33485e;
+  font-weight: 500;
+  display: none;
 }
 
 /* Weather Container */
