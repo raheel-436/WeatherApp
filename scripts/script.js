@@ -17,28 +17,35 @@ async function fetchWeather(city) {
 }
 
 function displayWeather(data) {
+  let {
+    name: cityName,
+    main: { temp, humidity },
+    wind: { speed: windSpeed },
+    weather,
+  } = data;
+
   let cityElement = document.querySelector(".city");
   let tempElement = document.querySelector(".temp");
   let humidityElement = document.querySelector(".humidity");
   let windElement = document.querySelector(".wind");
   let weatherIcon = document.querySelector(".weather-img");
 
-  cityElement.innerHTML = data.name;
-  tempElement.innerHTML = Math.round(data.main.temp) + "°c";
-  humidityElement.innerHTML = data.main.humidity + "%";
-  windElement.innerHTML = data.wind.speed + "km/h";
+  cityElement.innerHTML = cityName;
+  tempElement.innerHTML = Math.round(temp) + "°c";
+  humidityElement.innerHTML = humidity + "%";
+  windElement.innerHTML = windSpeed + "km/h";
 
-  if (data.weather[0].main == "Clear") {
+  if (weather[0].main == "Clear") {
     weatherIcon.src = "./assets/clear.png";
-  } else if (data.weather[0].main == "Clouds") {
+  } else if (weather[0].main == "Clouds") {
     weatherIcon.src = "./assets/clouds.png";
-  } else if (data.weather[0].main == "Drizzle") {
+  } else if (weather[0].main == "Drizzle") {
     weatherIcon.src = "./assets/drizzle.png";
-  } else if (data.weather[0].main == "Rain") {
+  } else if (weather[0].main == "Rain") {
     weatherIcon.src = "./assets/rain.png";
-  } else if (data.weather[0].main == "Snow") {
+  } else if (weather[0].main == "Snow") {
     weatherIcon.src = "./assets/snow.png";
-  } else if (data.weather[0].main == "Mist") {
+  } else if (weather[0].main == "Mist") {
     weatherIcon.src = "./assets/mist.png";
   }
 }
