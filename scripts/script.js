@@ -4,7 +4,7 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 let searchInput = document.querySelector(".search-input");
 const searchBtn = document.querySelector(".search-btn");
 
-const defaultCity = "Berlin";
+const defaultCity = "Peshawar";
 
 // Fetch weather for default city on page load
 fetchWeather(defaultCity);
