@@ -68,7 +68,7 @@ function displayWeather(data) {
 setTimeout(function () {
   document.querySelector(".spinner-container").style.display = "none";
   document.querySelector(".container").style.display = "flex";
-}, 2000);
+}, 3000);
 
 searchBtn.addEventListener("click", () => {
   let searchValue = searchInput.value;
