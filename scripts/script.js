@@ -57,6 +57,11 @@ function displayWeather(data) {
   document.querySelector(".error").style.display = "none";
   document.querySelector(".weather").style.display = "flex";
 }
+/*Load Website after this animation*/
+setTimeout(function () {
+  document.querySelector(".spinner-container").style.display = "none";
+  document.querySelector(".container").style.display = "flex";
+}, 2000);
 
 searchBtn.addEventListener("click", () => {
   let searchValue = searchInput.value;
