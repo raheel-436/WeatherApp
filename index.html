@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- Spinner Container -->
+    <div class="spinner-container">
+      <div class="spinner"></div>
+    </div>
     <div class="container">
       <div class="app-container">
         <div class="search">
@@ -33,6 +38,7 @@
             alt="weather image"
             draggable="false"
           />
+          <p class="weather-status">clear</p>
           <h1 class="temp">22°c</h1>
           <h2 class="city">Berlin</h2>
 
