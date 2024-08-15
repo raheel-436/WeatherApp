@@ -17,7 +17,7 @@ async function fetchWeather(city) {
     document.querySelector(".weather").style.display = "none";
   } else {
     let data = await resposne.json();
-    console.log(data);
+    // console.log(data);
     displayWeather(data);
   }
 }
