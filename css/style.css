@@ -129,6 +129,7 @@
 }
 .weather-img {
   width: 100px;
+  margin-bottom: 1rem;
 }
 
 .weather-status {
