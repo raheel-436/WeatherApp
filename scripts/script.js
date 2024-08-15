@@ -52,7 +52,7 @@ function displayWeather(data) {
     weatherIcon.src = "./assets/drizzle.png";
     weatherStatus.innerHTML = "Drizzle";
   } else if (weather[0].main == "Rain") {
-    weatherIcon.src = "./assets/rain.png";
+    weatherIcon.src = "./assets/rain.gif";
     weatherStatus.innerHTML = "Rain";
   } else if (weather[0].main == "Snow") {
     weatherIcon.src = "./assets/snow.png";
